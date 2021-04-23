@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="mainframe">
+      <h4>Random Word (intento# {{counter}})</h4>
+      <form action="random_word" method="POST">
+        {%csrf_token%}
+        <h1 class="randomText">{{random}}</h1>
+        <button type="submit">Generar</button>
+      </form>
+    </div>
+  </body>
+</html>
